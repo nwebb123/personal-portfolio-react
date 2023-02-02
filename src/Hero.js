@@ -2,6 +2,7 @@ import React from 'react'
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 function Hero() {
+
   return (
     <section id="Hero" className="min-h-screen hero-bg">
     <div className="text-center sm:pt-12 md:pt-28">
@@ -24,10 +25,10 @@ function Hero() {
       </p>
 
       <div className="text-5xl md:text-6xl flex justify-center gap-12 py-1 px-1 text-gray-600">
-        <a href="#">
+        <a href="https://www.linkedin.com/in/nicholas-webb-dev/" target="_blank" rel="noreferrer" aria-label="Linked-In Icon">
           <AiFillLinkedin />
         </a>
-        <a href="#">
+        <a href="https://github.com/nwebb123" target="_blank" rel="noreferrer" aria-label="GitHub Icon">
           <AiFillGithub />
         </a>
         <a
