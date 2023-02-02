@@ -9,6 +9,7 @@ import Footer from './Footer'
 function App() {
   return (
     <>
+      <div id="top"></div>
       <Navbar />
       <Hero />
       <About />

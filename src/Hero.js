@@ -4,7 +4,7 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 function Hero() {
 
   return (
-    <section id="Hero" className="min-h-screen hero-bg">
+    <section id="hero" className="min-h-screen hero-bg">
     <div className="text-center sm:pt-12 md:pt-28">
       <h2 className="text-5xl md:text-7xl p-4 text-black font-light">
         Nicholas Webb
