@@ -1,29 +1,48 @@
-import { React, useState } from "react";
+import { React } from "react";
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-    value: "",
-  });
+  //   const [formData, setFormData] = useState({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     subject: "",
+  //     message: "",
+  //     value: "",
+  //   });
 
-  //console.log(formData.favColor)
+  //   function handleChange(event) {
+  //     console.log(event);
+  //     const { name, value } = event.target;
+  //     setFormData((prevFormData) => {
+  //       return {
+  //         ...prevFormData,
+  //         [name]: value,
+  //       };
+  //     });
 
-  function handleChange(event) {
-    console.log(event);
-    const { name, value} = event.target;
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        [name]: value,
-      };
-    });
+  //     console.log(formData.name);
+  //   }
 
-    console.log(formData.name, )
+  function Submit(event) {
+    const formEl = document.querySelector("form");
+    event.preventDefault();
 
+    console.log("Submitted!");
+
+    const formData = new FormData(formEl);
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbzjsCTxBdTrTKS46fUYLiFdDLoYLEsZ5ZFLSsfECBE9fStfOUKgSUnbqQQozpGLA9_y/exec",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //   })
+    //   .catch((error) => console.log(error));
   }
 
   return (
@@ -34,23 +53,19 @@ function Contact() {
       </div>
 
       {/* Form utilizes controlled inputs */}
-      <div className="block p-6 rounded-lg  bg-white max-w-sm">
-        <form>
+      <div className="block p-6 rounded-lg  bg-white max-w-2xl mx-auto">
+        <form id="form" onSubmit={(event) => Submit(event)}>
           {/* Name */}
           <div className="form-group mb-3">
-            <label
-              htmlFor="name"
-              className="text-lg form-label inline-block mb-2 text-gray-700"
-            >
+            <label className="text-lg form-label inline-block mb-2 text-gray-700">
               Name:
             </label>
             <input
-              name="name"
-              onChange={handleChange}
+              name="Name"
+              //   onChange={handleChange}
               type="text"
               //   maxLength={15} minLength={1}
-              id="name"
-              value={formData.name}
+              //   value={formData.name}
               aria-describedby=""
               placeholder="Joe Shmoe"
               className="form-control
@@ -73,19 +88,15 @@ function Contact() {
 
           {/* Email */}
           <div className="form-group mb-3">
-            <label
-              for="email"
-              className="text-lg form-label inline-block mb-2 text-gray-700"
-            >
+            <label className="text-lg form-label inline-block mb-2 text-gray-700">
               Email address:
             </label>
             <input
-              name="email"
-              onChange={handleChange}
+              name="Email"
+              //   onChange={handleChange}
               type="email"
               placeholder="Jshmoe@thebomb.com"
-              value={formData.email}
-              id="email"
+              //   value={formData.email}
               aria-describedby=""
               className="form-control
         block
@@ -107,19 +118,15 @@ function Contact() {
 
           {/* Phone */}
           <div className="form-group mb-3">
-            <label
-              htmlFor="phone"
-              className="text-lg form-label inline-block mb-2 text-gray-700"
-            >
+            <label className="text-lg form-label inline-block mb-2 text-gray-700">
               Phone:
             </label>
             <input
-              name="phone"
-              onChange={handleChange}
+              name="Phone"
+              //   onChange={handleChange}
               type="text"
               //   maxLength={15} minLength={1}
-              id="contact-phone"
-              value={formData.phone}
+              //   value={formData.phone}
               aria-describedby=""
               placeholder="(123) 456-7890"
               className="form-control
@@ -142,21 +149,17 @@ function Contact() {
 
           {/* Subject */}
           <div className="form-group mb-3">
-            <label
-              htmlFor="subject"
-              className="text-lg form-label inline-block mb-2 text-gray-700"
-            >
+            <label className="text-lg form-label inline-block mb-2 text-gray-700">
               Subject:
             </label>
             <input
-              name="subject"
-              onChange={handleChange}
+              name="Subject"
+              //   onChange={handleChange}
               type="text"
               //   maxLength={15} minLength={1}
-              id="subject"
               aria-describedby=""
               placeholder="What's up Doc?"
-              value={formData.subject}
+              //   value={formData.subject}
               className="form-control
         block
         w-full
@@ -177,17 +180,14 @@ function Contact() {
 
           {/* Message */}
           <div className="form-group mb-3">
-            <label
-              htmlFor="message"
-              className="text-lg form-label inline-block mb-2 text-gray-700"
-            >
+            <label className="text-lg form-label inline-block mb-2 text-gray-700">
               Message:
             </label>
             <textarea
-              name="message"
-              onChange={handleChange}
+              name="Message"
+              //   onChange={handleChange}
               placeholder="Text area here"
-              value={formData.comments}
+              //   value={formData.comments}
               className="form-control
         block
         w-full
@@ -210,8 +210,7 @@ function Contact() {
           <div className="mb-3">
             <button
               type="submit"
-              className="
-              flex        
+              className="flex        
    mx-auto
       px-6
       py-1.5
