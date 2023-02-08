@@ -34,7 +34,7 @@ function Contact() {
     let subjectInput = formEl[2];
     let messageInput = formEl[3];
 
-    let formInputs = [nameInput, emailInput, subjectInput, messageInput];
+    // let formInputs = [nameInput, emailInput, subjectInput, messageInput];
 
     //Form Validation to ensure inputs are not blank
       //Later swap out all these values for an input.value === "" and maybe formInputs.forEach((input) => {
