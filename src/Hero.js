@@ -17,7 +17,7 @@ function Hero() {
          
         </p> */}
 
-        <div className="text-5xl md:text-6xl flex justify-center gap-6 py-4 px-8 text-white-600">
+        <div className="text-5xl md:text-6xl flex justify-center gap-6 py-4 px-8 text-gray-600">
           
           <a
             href="https://www.linkedin.com/in/nicholas-webb-dev/"
