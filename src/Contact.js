@@ -1,4 +1,5 @@
 import { React } from "react";
+import Swal from "sweetalert2";
 
 function Contact() {
   //   const [formData, setFormData] = useState({
@@ -23,39 +24,67 @@ function Contact() {
   //     console.log(formData.name);
   //   }
 
-  //Clear form after submission.
-
-
-
-
   function Submit(event) {
-    event.preventDefault(); 
-
-
+    event.preventDefault();
     const formEl = document.querySelector("form");
-    console.log(formEl)
 
+    //console.log(formEl[0].name);
+    let nameInput = formEl[0];
+    let emailInput = formEl[1];
+    let subjectInput = formEl[2];
+    let messageInput = formEl[3];
 
-    console.log("Submitted!");
+    let formInputs = [nameInput, emailInput, subjectInput, messageInput];
 
-    
-    const formData = new FormData(formEl);
+    //Form Validation to ensure inputs are not blank
+      //Later swap out all these values for an input.value === "" and maybe formInputs.forEach((input) => {
+      if (nameInput.value === "" || emailInput.value === "" || subjectInput.value === "" || messageInput.value === "") {
+        Swal.fire({ 
+          title: "Woops!",
+          text: `Don't forget to fill out all fields before submitting!`,
+          icon: "error",
+          confirmButtonText: "Ok",
+        });
 
-    //Fetch API is fetching Google Sheet through AppScripts and and appending form's input to the rows.
-    fetch(
-      "https://script.google.com/macros/s/AKfycbzjsCTxBdTrTKS46fUYLiFdDLoYLEsZ5ZFLSsfECBE9fStfOUKgSUnbqQQozpGLA9_y/exec",
-      {
-        method: "POST",
-        body: formData,
+      } else {
+
+        //FormData is a convenient way to package data and then "append" that data somewhere.
+        const formData = new FormData(formEl);
+
+        //Fetch API is fetching Google Sheet through AppScripts and sending FormData object of form. Google Script takes FormData and appends it to the next available row.
+        fetch(
+          "https://script.google.com/macros/s/AKfycbzjsCTxBdTrTKS46fUYLiFdDLoYLEsZ5ZFLSsfECBE9fStfOUKgSUnbqQQozpGLA9_y/exec",
+          {
+            method: "POST",
+            body: formData,
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((error) => console.log(error));
+
+        formEl.reset();
+
+        Swal.fire({ 
+          title: "Message Sent!",
+          // text: ``,
+          icon: "success",
+          confirmButtonText: "Ok",
+        });
+
+        console.log("Submitted!");
       }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => console.log(error));
-
-      formEl.reset();
+    ;
+    //else {
+    //   Swal.fire({
+    //     title: "Message Sent!",
+    //     // text: ``,
+    //     icon: "check",
+    //     confirmButtonText: "Ok",
+    //   });
+    // }
   }
 
   return (
