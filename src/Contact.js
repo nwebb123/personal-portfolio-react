@@ -23,14 +23,25 @@ function Contact() {
   //     console.log(formData.name);
   //   }
 
+  //Clear form after submission.
+
+
+
+
   function Submit(event) {
+    event.preventDefault(); 
+
+
     const formEl = document.querySelector("form");
-    event.preventDefault();
+    console.log(formEl)
+
 
     console.log("Submitted!");
 
+    
     const formData = new FormData(formEl);
 
+    //Fetch API is fetching Google Sheet through AppScripts and and appending form's input to the rows.
     fetch(
       "https://script.google.com/macros/s/AKfycbzjsCTxBdTrTKS46fUYLiFdDLoYLEsZ5ZFLSsfECBE9fStfOUKgSUnbqQQozpGLA9_y/exec",
       {
@@ -38,11 +49,13 @@ function Contact() {
         body: formData,
       }
     )
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //   })
-    //   .catch((error) => console.log(error));
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => console.log(error));
+
+      formEl.reset();
   }
 
   return (
@@ -207,7 +220,7 @@ function Contact() {
           </div>
 
           {/* Submit button */}
-          <div className="mb-3">
+          <div className="my-1 py-3">
             <button
               type="submit"
               className="flex        
