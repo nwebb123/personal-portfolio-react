@@ -5,10 +5,10 @@ function Hero() {
   return (
     <section id="hero" className="min-h-screen hero-bg">
       <div className="text-center sm:pt-24 md:pt-28 lg:pt-32">
-        <h2 className="text-5xl md:text-7xl xl:text-8xl p-4 text-black font-light">
+        <h2 className="text-5xl md:text-7xl xxl:text-8xl p-4 text-black font-light">
           Nicholas Webb
         </h2>
-        <h3 className="text-black text-2xl md:text-4xl xl:text-5xl py-4 md:py-6 lg:py-8 font-light">
+        <h3 className="text-black text-2xl md:text-4xl xxl:text-5xl py-4 md:py-6 lg:py-8 font-light">
           Web Developer
         </h3>
         {/* <p className="text-lg md:text-2xl p-5 leading-8 md:leading-10 text-black max-w-2xl mx-auto">
