@@ -81,7 +81,7 @@ function About() {
           {/*lg:h-2/3 md:h-4/5 */}
           <h3 className="mx-auto m-2 p-2 lg:p-8 flex lg:text-start text-lg md:text-2xl xl:text-3xl leading-8 md:leading-10">
             Hello! I am a web developer based in south-east Michigan who enjoys
-            the art of turning code into coffee. I have experience implementing
+            the art of turning coffee into code. I have experience implementing
             solutions with a range of technologies to create responsive,
             interactive, and user-friendly web applications. Along with
             development experience I have professional experience effectively
