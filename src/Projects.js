@@ -19,7 +19,7 @@ function Projects() {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="h-full rounded-xl shadow-xl p-4 pt-6 text-center bg-slate-300">
+              <div className="h-full rounded-xl shadow-xl p-4 pt-6 text-center border border-black bg-slate-300">
                 <img
                   src={PPLSplit}
                   width={220}
@@ -41,7 +41,7 @@ function Projects() {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="h-full rounded-xl shadow-xl p-4 pt-6 text-center bg-slate-300">
+              <div className="h-full rounded-xl shadow-xl p-4 pt-6 text-center border border-black bg-slate-300">
                 <img
                   src={QRCode}
                   width={90}
@@ -63,7 +63,7 @@ function Projects() {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="h-full rounded-xl shadow-xl p-4 pt-6 text-center bg-slate-300">
+              <div className="h-full rounded-xl shadow-xl p-4 pt-6 text-center border border-black bg-slate-300">
                 <img
                   src={MightGuy}
                   width={80}
@@ -85,7 +85,7 @@ function Projects() {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="h-full rounded-xl shadow-xl p-4 pt-6 text-center bg-slate-300">
+              <div className="h-full rounded-xl shadow-xl p-4 pt-6 text-center border border-black bg-slate-300">
                 <img
                   src={Airbnb}
                   width={140}
