@@ -77,14 +77,7 @@ function Contact() {
         console.log("Submitted!");
       }
     ;
-    //else {
-    //   Swal.fire({
-    //     title: "Message Sent!",
-    //     // text: ``,
-    //     icon: "check",
-    //     confirmButtonText: "Ok",
-    //   });
-    // }
+ 
   }
 
   return (
@@ -95,7 +88,7 @@ function Contact() {
       </div>
 
       {/* Form utilizes controlled inputs */}
-      <div className="block p-6 rounded-lg  bg-white max-w-2xl mx-auto">
+      <div className="block m-4 md:mx-auto p-6 max-w-2xl  border border-black bg-slate-300 rounded-xl shadow-xl">
         <form id="form" onSubmit={(event) => Submit(event)}>
           {/* Name */}
           <div className="form-group mb-3">
@@ -228,7 +221,7 @@ function Contact() {
             <textarea
               name="Message"
               //   onChange={handleChange}
-              placeholder="Text area here"
+              placeholder=""
               //   value={formData.comments}
               className="form-control
         block
