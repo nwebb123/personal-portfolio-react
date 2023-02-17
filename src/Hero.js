@@ -10,13 +10,7 @@ function Hero() {
         </h2>
         <h3 className="text-black text-2xl md:text-4xl xxl:text-5xl py-4 md:py-6 lg:py-8 font-light">
           Web Developer
-        </h3>
-        {/* <p className="text-lg md:text-2xl p-5 leading-8 md:leading-10 text-black max-w-2xl mx-auto">
-          Developer, teacher, and life-long learner. Currently working for
-          Akorbi ensuring the quality of Waymo's self-driving car software.
-         
-        </p> */}
-
+        </h3>       
         <div className="text-5xl md:text-6xl flex justify-center gap-6 py-4 px-8 text-gray-600">
           
           <a
