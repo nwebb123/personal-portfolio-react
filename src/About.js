@@ -1,7 +1,7 @@
 import React from "react";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import NickWebb from "./assets/about-assets/nick_webb.jpg";
-import Resume from "./assets/about-assets/Resume_2023.pdf";
+import Resume from "./assets/about-assets/Resume_2025.pdf";
 
 function About() {
   return (
@@ -79,29 +79,16 @@ function About() {
 
         <div className="About-Description m-3 p-2 px-6 border border-black bg-slate-300 rounded-xl shadow-xl">
           {/*lg:h-2/3 md:h-4/5 */}
-          <h3 className="mx-auto m-2 p-2 lg:p-8 flex lg:text-start text-lg md:text-2xl xl:text-3xl leading-8 md:leading-10">
-            Hello! I am a web developer based in south-east Michigan who enjoys
+          <h3 className="text-center m-2 p-2 lg:p-8 flex lg:text-start text-lg md:text-2xl xl:text-3xl leading-8 md:leading-10">
+            Hello! I am a Software Engineer based in south-east Michigan who enjoys
             the art of turning coffee into code. I have experience implementing
             solutions with a range of technologies to create responsive,
-            interactive, and user-friendly web applications. Along with
-            development experience I have professional experience effectively
+            interactive, and user-friendly web applications. I have two years of professional experience effectively
             communicating with clients, team members, and stakeholders to ensure
             that projects are being delivered on time and to the highest
-            standard. From writing simple scripts to ensuring the quality of
+            standard. With experience ranging from writing simple scripts to ensuring the quality of
             self-driving car software, I enjoy helping others with problems that
             need solving.
-            {/* Web Developer based out of Westland, Michigan. I have experience
-          implementing a wide range of technologies used to create
-          responsive websites and applications. I'm currently working as
-          a Waymo EngOps Senior Operations Associate ensuring the quality of
-          self-driving car software. */}
-            {/* <a
-            href="https://waymo.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-cyan-500 "
-          >
-          </a> */}
           </h3>
         </div>
       </div>
