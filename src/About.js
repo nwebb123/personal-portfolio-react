@@ -21,7 +21,7 @@ function About() {
             <h3 className="text-2xl md:text-2xl  text-center">Web Developer</h3>
 
             <ul className="text-center py-2 md:text-lg  ">
-              <li>Location: Westland, MI</li>
+              <li>Location: Belleville, MI</li>
               <li>Education: B.S. from EMU</li>
               <li>Phone: (517) 375-4206</li>
               <li>
