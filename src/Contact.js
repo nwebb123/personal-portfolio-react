@@ -34,61 +34,60 @@ function Contact() {
     let subjectInput = formEl[2];
     let messageInput = formEl[3];
 
-    // let formInputs = [nameInput, emailInput, subjectInput, messageInput];
+    if (
+      nameInput.value === "" ||
+      emailInput.value === "" ||
+      subjectInput.value === "" ||
+      messageInput.value === ""
+    ) {
+      Swal.fire({
+        title: "Woops!",
+        text: `Don't forget to fill out all fields before submitting!`,
+        icon: "error",
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#d33",
+      });
+    } else {
+      //FormData is a convenient way to package data and then "append" that data somewhere.
+      const formData = new FormData(formEl);
 
-    //Form Validation to ensure inputs are not blank
-      //Later swap out all these values for an input.value === "" and maybe formInputs.forEach((input) => {
-      if (nameInput.value === "" || emailInput.value === "" || subjectInput.value === "" || messageInput.value === "") {
-        Swal.fire({ 
-          title: "Woops!",
-          text: `Don't forget to fill out all fields before submitting!`,
-          icon: "error",
-          confirmButtonText: "Ok",
-        });
+      //Fetch API is fetching Google Sheet through AppScripts and sending FormData object of form. Google Script takes FormData and appends it to the next available row.
+      fetch(
+        "https://script.google.com/macros/s/AKfycbzjsCTxBdTrTKS46fUYLiFdDLoYLEsZ5ZFLSsfECBE9fStfOUKgSUnbqQQozpGLA9_y/exec",
+        {
+          method: "POST",
+          body: formData,
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => console.log(error));
 
-      } else {
+      formEl.reset();
 
-        //FormData is a convenient way to package data and then "append" that data somewhere.
-        const formData = new FormData(formEl);
+      Swal.fire({
+        title: "Message Sent!",
+        // text: ``,
+        icon: "success",
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#0891b2",
+      });
 
-        //Fetch API is fetching Google Sheet through AppScripts and sending FormData object of form. Google Script takes FormData and appends it to the next available row.
-        fetch(
-          "https://script.google.com/macros/s/AKfycbzjsCTxBdTrTKS46fUYLiFdDLoYLEsZ5ZFLSsfECBE9fStfOUKgSUnbqQQozpGLA9_y/exec",
-          {
-            method: "POST",
-            body: formData,
-          }
-        )
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-          })
-          .catch((error) => console.log(error));
-
-        formEl.reset();
-
-        Swal.fire({ 
-          title: "Message Sent!",
-          // text: ``,
-          icon: "success",
-          confirmButtonText: "Ok",
-        });
-
-        console.log("Submitted!");
-      }
-    ;
- 
+      console.log("Submitted!");
+    }
   }
 
   return (
-    <section id="contact" className="my-1 py-3 pt-16">
+    <section id="contact" className="py-3 pt-16 bg-slate-300">
       <div className="text-center my-3 py-3">
         <h1 className="font-semibold text-3xl ">Contact</h1>
         <div className="mx-auto w-28 h-1 bg-black rounded border-0 dark:bg-gray-800 "></div>
       </div>
 
       {/* Form utilizes controlled inputs */}
-      <div className="block m-4 md:mx-auto p-6 max-w-2xl  border border-black bg-slate-300 rounded-xl shadow-xl">
+      <div className="block m-4 md:mx-auto p-6 max-w-2xl  border border-black bg-slate-100 rounded-xl shadow-xl">
         <form id="form" onSubmit={(event) => Submit(event)}>
           {/* Name */}
           <div className="form-group mb-3">
@@ -193,7 +192,7 @@ function Contact() {
               type="text"
               //   maxLength={15} minLength={1}
               aria-describedby=""
-              placeholder="What's up Doc?"
+              placeholder="Subject"
               //   value={formData.subject}
               className="form-control
         block
@@ -221,7 +220,8 @@ function Contact() {
             <textarea
               name="Message"
               //   onChange={handleChange}
-              placeholder=""
+              placeholder="Enter your message here"
+              row={4}
               //   value={formData.comments}
               className="form-control
         block

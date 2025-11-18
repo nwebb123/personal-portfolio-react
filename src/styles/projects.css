@@ -1,0 +1,47 @@
+/* Container Section */
+.projects-section {
+  @apply py-3 pt-16 bg-slate-300;
+}
+
+.projects-header {
+  @apply text-center my-3 py-3;
+}
+
+.projects-title {
+  @apply font-semibold text-3xl;
+}
+
+.projects-underline {
+  @apply mx-auto w-28 h-1 bg-black rounded border-0 dark:bg-gray-800;
+}
+
+/* Grid */
+.projects-grid {
+  @apply sm:mx-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-5;
+}
+
+/* Project Card */
+.project-card {
+  @apply h-full rounded-xl shadow-xl p-4 pt-6 text-center border border-black bg-slate-100;
+}
+
+.project-img {
+  @apply mx-auto py-4 pb-6 pl-3;
+}
+
+.project-title {
+  @apply text-xl font-medium pt-3;
+}
+
+.project-text {
+  @apply text-lg py-3 font-thin;
+}
+
+/* Special variations */
+.project-img-small {
+  @apply mx-auto py-3 pb-2 pl-3;
+}
+
+.project-img-centered {
+  @apply mx-auto;
+}
