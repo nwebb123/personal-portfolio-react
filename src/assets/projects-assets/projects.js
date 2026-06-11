@@ -6,7 +6,7 @@ export const projects = [
   {
     title: "Wedding RSVP App",
     href: "https://emilyandnick.netlify.app/",
-    github: "https://github.com/placeholder/wedding-rsvp",
+    github: "https://github.com/nwebb123/wedding-site-react",
     img: WeddingSite,
     imgWidth: 90,
     imgClass: "project-img",
