@@ -3,21 +3,22 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 function Hero() {
   return (
-    <section id="hero" className="min-h-screen hero-bg">
+    <section id="hero" className="min-h-screen hero-bg dark:bg-slate-900">
       <div className="text-center sm:pt-24 md:pt-28 lg:pt-32">
-        <h2 className="text-5xl md:text-7xl xxl:text-8xl p-4 text-black font-light">
+        <h2 className="text-5xl md:text-7xl xxl:text-8xl p-4 text-black dark:text-white font-light">
           Nicholas Webb
         </h2>
-        <h3 className="text-black text-2xl md:text-4xl xxl:text-5xl py-4 md:py-6 lg:py-8 font-light">
+        <h3 className="text-black dark:text-white text-2xl md:text-4xl xxl:text-5xl py-4 md:py-6 lg:py-8 font-light">
           Web Developer
         </h3>       
-        <div className="text-5xl md:text-6xl flex justify-center gap-6 py-4 px-8 text-gray-600">
+        <div className="text-5xl md:text-6xl flex justify-center gap-6 py-4 px-8 text-gray-600 dark:text-gray-300">
           
           <a
             href="https://www.linkedin.com/in/nicholas-webb-dev/"
             target="_blank"
             rel="noreferrer"
             aria-label="Linked-In Icon"
+            className="hover:text-indigo-600 dark:hover:text-indigo-400 transition"
           >
             <AiFillLinkedin />
           </a>
@@ -26,29 +27,30 @@ function Hero() {
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub Icon"
+            className="hover:text-gray-900 dark:hover:text-indigo-400 transition"
           >
             <AiFillGithub />
           </a>
           <a
             href="#projects"
             className="text-lg        
-             px-3
-             py-2
-             bg-cyan-600
-             text-white
-             font-medium  
-             rounded
-             shadow-md
-             hover:bg-cyan-700 hover:shadow-lg
-             focus:bg-cyan-700 focus:shadow-lg focus:outline-none focus:ring-0
-             active:bg-cyan-800 active:shadow-lg
-             transition
-             duration-150
-             ease-in-out
-           p-2 
-           md:text-2xl 
+              px-3
+              py-2
+              bg-indigo-600
+              text-white
+              font-medium  
+              rounded
+              shadow-md
+              hover:bg-indigo-700 dark:hover:bg-indigo-700 hover:shadow-lg
+              focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0
+              active:bg-indigo-800 active:shadow-lg
+              transition
+              duration-150
+              ease-in-out
+            p-2 
+            md:text-2xl 
 
-           md:pt-3"
+            md:pt-3"
           >
             View My Work
           </a>
