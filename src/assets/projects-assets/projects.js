@@ -1,53 +1,36 @@
-import PPLSplit from "./pplsplit-logo.png";
-import QRCode from "./qr-code-project.png";
-import MightGuy from "./might-guy.png";
 import QuickQuiz from "./quick-quiz.png";
+import PPLSplit from "./pplsplit-logo.png";
 import WeddingSite from "./wedding-rings.png";
 
 export const projects = [
   {
     title: "Wedding RSVP App",
     href: "https://emilyandnick.netlify.app/",
+    github: "https://github.com/placeholder/wedding-rsvp",
     img: WeddingSite,
     imgWidth: 90,
     imgClass: "project-img",
     description:
-      "A full-stack RSVP application built with React, .NET Web API, & SQL. Contact me for access to a test account!",
+      "Full-stack RSVP application built with React, ASP.NET Core, and SQL Server. Scaled from free to paid tier supporting up to 150 requests over a 60-day period. Send me a message for a demo/walkthrough.",
   },
   {
     title: "Quick Quiz",
     href: "https://quick-quiz-reactjs.netlify.app/",
+    github: "https://github.com/nwebb123/quiz-app-react",
     img: QuickQuiz,
     imgWidth: 90,
     imgClass: "project-img-small",
     description:
-      "A React quiz application while on the go.",
+      "Interactive quiz application built with React demonstrating state management and component lifecycle practices. Features multiple choice questions, a scoring system, and responsive mobile-first design.",
   },
   {
     title: "PPL Workout Generator",
     href: "https://pplsplit.netlify.app/",
+    github: "https://github.com/nwebb123/workout-app-vanilla",
     img: PPLSplit,
     imgWidth: 220,
     imgClass: "project-img",
     description:
-      "Generates a randomized Push/Pull/Legs workout routine for daily workouts. Built with HTML, CSS, and JavaScript.",
-  },
-  {
-    title: "QR Code Generator",
-    href: "https://ineedaqrcode.netlify.app/",
-    img: QRCode,
-    imgWidth: 90,
-    imgClass: "project-img-small",
-    description:
-      "Create QR codes for events or websites with a simple, clean interface.",
-  },
-  {
-    title: "Inspire Me Might Guy!",
-    href: "https://mighty-might-guy.netlify.app/",
-    img: MightGuy,
-    imgWidth: 80,
-    imgClass: "project-img-centered",
-    description:
-      "A FreeCodeCamp tribute page built using Vue.js to provide inspirational quotes.",
+      "Randomized workout routine generator built with vanilla JavaScript and CSS. Helps users create varied Push/Pull/Legs workout splits to avoid workout plateaus and maximize training effectiveness.",
   },
 ];

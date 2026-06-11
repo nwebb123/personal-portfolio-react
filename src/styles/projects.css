@@ -1,6 +1,6 @@
 /* Container Section */
 .projects-section {
-  @apply py-3 pt-16 bg-slate-300;
+  @apply py-3 pt-16 bg-slate-300 dark:bg-slate-800;
 }
 
 .projects-header {
@@ -8,11 +8,11 @@
 }
 
 .projects-title {
-  @apply font-semibold text-3xl;
+  @apply font-semibold text-3xl text-gray-900 dark:text-white;
 }
 
 .projects-underline {
-  @apply mx-auto w-28 h-1 bg-black rounded border-0 dark:bg-gray-800;
+  @apply mx-auto w-28 h-1 bg-indigo-600 rounded border-0 dark:bg-indigo-600;
 }
 
 /* Grid */
@@ -20,9 +20,26 @@
   @apply sm:mx-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-5;
 }
 
+/* Project Card Wrapper */
+.project-card-wrapper {
+  @apply relative;
+}
+
+.project-card-link {
+  @apply block;
+}
+
 /* Project Card */
 .project-card {
-  @apply h-full rounded-xl shadow-xl p-4 pt-6 text-center border border-black bg-slate-100;
+  @apply h-full rounded-xl shadow-xl p-4 pt-6 text-center border border-black dark:border-indigo-600 bg-slate-100 dark:bg-slate-700 transition hover:shadow-2xl hover:scale-105;
+}
+
+.project-card-wrapper:hover .github-link {
+  @apply opacity-100;
+}
+
+.github-link {
+  @apply absolute top-4 right-4 text-gray-700 dark:text-indigo-400 opacity-70 hover:opacity-100 transition-opacity duration-200 hover:text-indigo-600 dark:hover:text-indigo-300;
 }
 
 .project-img {
@@ -30,11 +47,11 @@
 }
 
 .project-title {
-  @apply text-xl font-medium pt-3;
+  @apply text-xl font-medium pt-3 text-gray-900 dark:text-white;
 }
 
 .project-text {
-  @apply text-lg py-3 font-thin;
+  @apply text-lg py-3 font-thin text-gray-700 dark:text-gray-300;
 }
 
 /* Special variations */

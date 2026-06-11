@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       'sm': '375px',
@@ -32,6 +33,6 @@ module.exports = {
         'custom-bg': '#d8ded7',
       }
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
 }

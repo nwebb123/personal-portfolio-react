@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #4f46e5;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+/* Hero Background - Light mode */
+.hero-bg {
+  background-image: url('./assets/hero-assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Hero Background - Dark mode */
+.dark .hero-bg {
+  background-image: url('./assets/hero-assets/stars-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+
+
+

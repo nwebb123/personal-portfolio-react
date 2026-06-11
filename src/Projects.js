@@ -16,6 +16,7 @@ function Projects() {
           <ProjectCard
             key={index}
             href={p.href}
+            github={p.github}
             img={p.img}
             imgWidth={p.imgWidth}
             imgClass={p.imgClass}
