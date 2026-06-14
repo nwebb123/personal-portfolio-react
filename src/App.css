@@ -55,6 +55,14 @@
   background-repeat: no-repeat;
 }
 
+/* Disable fixed background on mobile for sharp rendering (iOS Safari fix) */
+@media (max-width: 767px) {
+  .hero-bg,
+  .dark .hero-bg {
+    background-attachment: scroll;
+  }
+}
+
 
 
 
