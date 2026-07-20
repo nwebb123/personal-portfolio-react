@@ -36,7 +36,7 @@ function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 py-3 sm:py-5 px-1 sm:px-2 lg:px-4 flex justify-center gap-x-3 sm:gap-x-5 lg:gap-x-8 items-center flex-wrap shadow-xl bg-white dark:bg-slate-900">
-      <a href="#home" className="hover:text-indigo-600 transition">
+      <a href="#hero" className="hover:text-indigo-600 transition">
         <h1 className="text-sm sm:text-base md:text-lg lg:text-2xl font-medium text-gray-900 dark:text-white">Home</h1>
       </a>
       <a href="#about" className="hover:text-indigo-600 transition">
